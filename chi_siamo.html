@@ -2,13 +2,11 @@
 
 <head>
 <meta http-equiv="Content-Language" content="it">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <title>CHI SIAMO</title>
 <link rel="stylesheet" href="style.css" type="text/css">
-
-<bgsound src="inno.mid" loop="-1">
 
 </head>
 
@@ -16,7 +14,7 @@
 
 <h2>LA STORIA</h2>
 
-<p>I Todos Pretos (TP) nascono nell'estate del 2001 da un'idea di Claudi�o,
+<p>I Todos Pretos (TP) nascono nell'estate del 2001 da un'idea di Claudião,
 supportata da Alex e Quique. Il nome della squadra, in brasiliano, vuole
 richiamare la mitica compagine neozelandese degli All Blacks di rugby. I TP da subito adottano i colori, la lingua, la
 cultura e le musiche dei giallo
@@ -25,28 +23,71 @@ brasiliano. <font color="#FFFFFF"><br>
 L'idea prende piede, si preparano preventivi per la muta da gioco e si fanno
 vivi anche sponsor importanti, rivelatisi a posteriori fantomatici per questioni
 meramente burocratiche. La situazione di stallo non abbatte gli ideatori, si va
-avanti. </font>Al nome ed al logo ci pensa Claudi�o, Alex si attiva per lo sponsor. A settembre
+avanti. </font>Al nome ed al logo ci pensa Claudião, Alex si attiva per lo sponsor. A settembre
 si organizzano le prime partite, inizialmente di footsala (calcio a 5) e successivamente di
 calciotto sul mitico centrale dell'Empire in zona Aurelia a Roma.<br>
 I TP si allenano costantemente una volta a settimana, per divertirsi, fare
-attivit� fisica e stare assieme, ma sempre nello spirito dello sport, scendendo
+attività fisica e stare assieme, ma sempre nello spirito dello sport, scendendo
 in campo per cercare di vincere.<br>
 La voglia di indossare una muta sociale e non l'iniziale maglia della nazionale
-brasiliana � coronata il 17 gennaio 2002; l'evento storico viene inaugurato in
+brasiliana è coronata il 17 gennaio 2002; l'evento storico viene inaugurato in
 una gelida serata con il termometro che si attesta sui 2 gradi. Tali condizioni
 climatiche influenzano pesantemente la prestazione dei TP, compagine carioca di
 adozione, che esce dal terreno di gioco con una sconfitta di misura per 2-3.<br>
-Altra data importante da ricordare � il 19 febbraio 2002, data in cui il primo
+Altra data importante da ricordare è il 19 febbraio 2002, data in cui il primo
 Mr. dei TP, Ennio Fraternali, siede in panchina conducendo la squadra ad una
 vittoria tennistica per 6-0 e spezzando l'ormai preoccupante serie di
 prestazioni negative che durava da tre mesi.<br>
-Mr. Fraternali porta in dote la tranquillit�, i consigli, l'esperienza, il
+Mr. Fraternali porta in dote la tranquillità, i consigli, l'esperienza, il
 tatticismo e il sangue freddo che trasformano i TP da una squadra mediocre in
 una squadra di cui avere rispetto. I risultati della sua prima stagione del resto parlano da soli,
 14 vittorie e solo 3 sconfitte, di cui la prima per 5-6 in una sfortunatissima serata in
 cui la dea bendata si accanisce materializzandosi in pali ed infortuni, e
 l'ultima per 2-4 realizzata in sua assenza per motivi familiari.<br>
 LUNGA VITA AI TODOS PRETOS, TODOS UNIDOS!!! </p>
+
+<!-- BACKUP ORIGINALE -->
+<!--
+<bgsound src="inno.mid" loop="-1">
+-->
+
+<!-- MODERNO -->
+<audio id="bgmusicX" loop style="display:none;">
+  <source src="inno.mp3" type="audio/mpeg">
+  <source src="inno.mid" type="audio/mid">
+</audio>
+<button onclick="toggleMusicX()"
+style="
+          position:fixed; 
+          left:50%
+          right:50%;
+          transform:translate(50%, 50%);
+          z-index:9999;
+          padding:15px 25px;
+          background:#222;
+          color:#fff;
+          border:none;
+          border-radius:25px; 
+          cursor:pointer;
+          font-size:18px;
+          box-shadow:0 4px 15px rgba(0,0,0,0.5);
+          min-width:160px;
+        ">
+▶️ Play Hino Nacional Brasileiro</button>
+
+<script>
+function toggleMusicX() {
+  const audio = document.getElementById('bgmusicX');
+  const btn = event.target || window.event.target;  // Fix compatibilità
+  if (audio.paused) {
+    audio.play();
+    btn.innerHTML = '&#9208; Pausa';  // ⏸️ emoji sicura
+  } else {
+    audio.pause();
+    btn.innerHTML = '&#9654; Play Hino Nacional Brasileiro';  // ▶️ emoji sicura
+  }
+}
+</script>
 
 </body>
 

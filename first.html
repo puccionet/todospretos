@@ -2,12 +2,11 @@
 
 <head>
 <meta http-equiv="Content-Language" content="it">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <title></title>
 <link rel="stylesheet" href="style.css" type="text/css">
-<bgsound src="sambadejaneiro.mid" loop="-1">
 </head>
 
 <body bgcolor="#000000">
@@ -39,8 +38,8 @@
       ---&gt;&nbsp;&nbsp; 6 VITTORIE E 2 SCONFITTE NELLE PRIME 8 GARE DELLA
       STAGIONE 2004-5&nbsp;&nbsp; ---&gt;&nbsp;&nbsp; 1 VITTORIA ED UN PAREGGIO
       CHIUDONO LA STAGIONE 2003-04&nbsp;&nbsp; ---&gt;&nbsp;&nbsp; 23 GIUGNO / 7
-      LUGLIO 2004&nbsp;&nbsp; DUE VITTORIE CONSECUTIVE E 300� GOL DEI TP
-      REALIZZATO DA FOXI�O&nbsp;&nbsp; ---&gt;&nbsp;&nbsp; 19 MAGGIO / 16
+      LUGLIO 2004&nbsp;&nbsp; DUE VITTORIE CONSECUTIVE E 300Â° GOL DEI TP
+      REALIZZATO DA FOXIÃ‘O&nbsp;&nbsp; ---&gt;&nbsp;&nbsp; 19 MAGGIO / 16
       GIUGNO 2004&nbsp;&nbsp; TRE PAREGGI E DUE SCONFITTE NELLE ULTIME 5 GARE&nbsp;&nbsp;
       ---&gt;&nbsp;&nbsp; 12.05.04&nbsp;&nbsp; PRIMA PARTITA E VITTORIA DEL 2004
       DOPO 180 GIORNI DI STOP&nbsp;&nbsp; --- &gt;&nbsp; 1.10.03&nbsp;&nbsp;
@@ -49,7 +48,7 @@
       STAGIONALE 2-6 VS BLUES&nbsp;&nbsp; --- &gt;&nbsp; 11.09.03&nbsp;&nbsp;
       ESORDIO STAGIONALE CON PAREGGIO 2-2 VS SAS&nbsp;&nbsp; ---&gt;&nbsp;&nbsp;
       21.7.03&nbsp;&nbsp; I NERI CHIUDONO LA STAGIONE CON UNA VITTORIA PER 5-3
-      CONTRO SAS&nbsp;&nbsp; ---&gt;&nbsp;&nbsp; 20.3.03&nbsp;&nbsp; 200� GOL
+      CONTRO SAS&nbsp;&nbsp; ---&gt;&nbsp;&nbsp; 20.3.03&nbsp;&nbsp; 200Â° GOL
       DEI TP SIGLATO DAL NEOACQUISTO TONINHO!!!&nbsp;&nbsp; ---&gt;</marquee>
       </h5>
     </td>
@@ -127,7 +126,7 @@ TECNICO DAL 15.01.02</font></blink></font></h5>
       :-(&nbsp;&nbsp; :-(&nbsp;&nbsp; ULTIME DALL'INFERMERIA&nbsp;&nbsp; ---&gt;&nbsp;&nbsp;
       16 FEBBRAIO 2005: DAVIDINHO BLOCCATO PER ACCERTAMENTI ALLA CAVIGLIA&nbsp;&nbsp;
       ---&gt;&nbsp;&nbsp; LUGLIO 2004: DAVIDINHO SALTA LE ULTIME TRE PARTITE,
-      CLAUDI�O LE ULTIME DUE PER CERCARE DI GUARIRE DALLA &quot;DOPPIA&quot;
+      CLAUDIÃƒO LE ULTIME DUE PER CERCARE DI GUARIRE DALLA &quot;DOPPIA&quot;
       TENDINITE&nbsp;&nbsp; ---&gt;&nbsp;&nbsp; 12.05.04&nbsp;&nbsp; DOPO 7 MESI
       DI STOP QUIQUE DI NUOVO IN CAMPO&nbsp;&nbsp; ---&gt;&nbsp;&nbsp; 15.10.03&nbsp;&nbsp;
       QUIQUE SI INFORTUNA AL GINOCCHIO DESTRO, LEGAMENTO CROCIATO INTERESSATO&nbsp;&nbsp;
@@ -166,6 +165,50 @@ TECNICO DAL 15.01.02</font></blink></font></h5>
 
   </center>
 </div>
+
+<!-- Musica di sottofondo (sostituisce bgsound) -->
+<audio id="bgmusic" loop preload="auto" style="display:none;">
+  <source src="sambadejaneiro.mp3" type="audio/mpeg">
+  <source src="sambadejaneiro.mid" type="audio/mid">
+  Il tuo browser non supporta l'audio.
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()" 
+        style="
+          position:fixed; 
+          top:50px; 
+          right:5px; 
+          z-index:9999; 
+          padding:10px 15px; 
+          background:#222; 
+          color:#fff; 
+          border:none; 
+          border-radius:5px; 
+          cursor:pointer;
+          font-size:14px;
+          box-shadow:0 2px 5px rgba(0,0,0,0.3);
+          min-width:120px;
+        ">  &#9654; PLAY SAMBA
+</button>
+
+<script>
+let musicPlaying = false;
+function toggleMusic() {
+  const audio = document.getElementById('bgmusic');
+  const btn = document.getElementById('musicBtn');
+  
+  if (!musicPlaying) {
+    audio.play().then(() => {
+      btn.innerHTML = '&#9208; PAUSA';  // ⏸️ emoji PAUSA
+      musicPlaying = true;
+    });
+  } else {
+    audio.pause();
+    btn.innerHTML = '&#9654; PLAY SAMBA';  // ▶️ emoji PLAY
+    musicPlaying = false;
+  }
+}
+</script>
 
 </body>
 

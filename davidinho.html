@@ -2,12 +2,12 @@
 
 <head>
 <meta http-equiv="Content-Language" content="it">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <title>davidinho</title>
 <link rel="stylesheet" href="style.css" type="text/css">
-<bgsound src="ciuri.mid" loop="-1">
+
 </head>
 
 <body bgcolor="#000000" text="#FFFFFF">
@@ -98,6 +98,49 @@
 
   </center>
 </div>
+
+<!-- BACKUP ORIGINALE -->
+<!--
+<bgsound src="ciuri.mid" loop="-1">
+-->
+
+<!-- MODERNO -->
+<audio id="bgmusicX" loop style="display:none;">
+  <source src="ciuri.mp3" type="audio/mpeg">
+  <source src="ciuri.mid" type="audio/mid">
+</audio>
+<button onclick="toggleMusicX()"
+style="
+          position:fixed; 
+          left:50%
+          right:50%;
+          transform:translate(50%, 50%);
+          z-index:9999;
+          padding:15px 25px;
+          background:#222;
+          color:#fff;
+          border:none;
+          border-radius:25px; 
+          cursor:pointer;
+          font-size:18px;
+          box-shadow:0 4px 15px rgba(0,0,0,0.5);
+          min-width:160px;
+        ">
+▶️ Play</button>
+
+<script>
+function toggleMusicX() {
+  const audio = document.getElementById('bgmusicX');
+  const btn = event.target || window.event.target;  // Fix compatibilità
+  if (audio.paused) {
+    audio.play();
+    btn.innerHTML = '&#9208; Pausa';  // ⏸️ emoji sicura
+  } else {
+    audio.pause();
+    btn.innerHTML = '&#9654; Play';  // ▶️ emoji sicura
+  }
+}
+</script>
 
 </body>
 
