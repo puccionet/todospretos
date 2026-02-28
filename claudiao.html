@@ -2,12 +2,12 @@
 
 <head>
 <meta http-equiv="Content-Language" content="it">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <title>claudiao</title>
 <link rel="stylesheet" href="style.css" type="text/css">
-<bgsound src="brasil.mid" loop="-1">
+
 </head>
 
 <body bgcolor="#000000" text="#FFFFFF">
@@ -101,7 +101,7 @@
     <td width="60%" height="50">
     <h4>--&gt; CON GLI AMICI DI PAVONA: 6 CAMPIONATI (1993 - '94 - '96 - '98 - '02
     - '04), 2 TORNEI (1995, 1996), 1 TORNEO TRIANGOLARE DI NATALE (2004), 1 COPPA MIGLIORE GIOCATORE STAGIONE 1997-98<br>
-    --&gt; CON GLI SCARPANTIBUS: 1 CAMPIONATO A 7 SQUADRE A / R, 1 SUPERCOPPA E 2�
+    --&gt; CON GLI SCARPANTIBUS: 1 CAMPIONATO A 7 SQUADRE A / R, 1 SUPERCOPPA E 2°
     POSTO IN COPPA ITALIA (1993 - 94)</h4>
     </td>
   </tr>
@@ -109,6 +109,49 @@
 
   </center>
 </div>
+
+<!-- BACKUP ORIGINALE -->
+<!--
+<bgsound src="brasil.mid" loop="-1">
+-->
+
+<!-- MODERNO -->
+<audio id="bgmusicX" loop style="display:none;">
+  <source src="brasil.mp3" type="audio/mpeg">
+  <source src="brasil.mid" type="audio/mid">
+</audio>
+<button onclick="toggleMusicX()"
+style="
+          position:fixed; 
+          left:50%
+          right:50%;
+          transform:translate(50%, 50%);
+          z-index:9999;
+          padding:15px 25px;
+          background:#222;
+          color:#fff;
+          border:none;
+          border-radius:25px; 
+          cursor:pointer;
+          font-size:18px;
+          box-shadow:0 4px 15px rgba(0,0,0,0.5);
+          min-width:160px;
+        ">
+▶️ Play</button>
+
+<script>
+function toggleMusicX() {
+  const audio = document.getElementById('bgmusicX');
+  const btn = event.target || window.event.target;  // Fix compatibilità
+  if (audio.paused) {
+    audio.play();
+    btn.innerHTML = '&#9208; Pausa';  // ⏸️ emoji sicura
+  } else {
+    audio.pause();
+    btn.innerHTML = '&#9654; Play';  // ▶️ emoji sicura
+  }
+}
+</script>
 
 </body>
 
